@@ -602,6 +602,13 @@ button {
   margin-top: 18px;
 }
 
+.quiz-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .hint {
   margin: 0;
   color: var(--muted);
@@ -1067,6 +1074,14 @@ button {
 
   .quiz-footer .btn {
     width: 100%;
+  }
+
+  .quiz-actions {
+    width: 100%;
+  }
+
+  .quiz-actions .btn {
+    flex: 1;
   }
 
   .hint {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function MultipleChoice({ question, onAnswered }) {
-  const [selected, setSelected] = useState(null);
+export default function MultipleChoice({ question, onAnswered, review }) {
+  const [selected, setSelected] = useState(review?.chosen ?? null);
   const { opsi, jawaban } = question;
   const options = Object.entries(opsi ?? {});
   const answered = selected !== null;
@@ -9,10 +9,9 @@ export default function MultipleChoice({ question, onAnswered }) {
   function choose(letter) {
     if (answered) return;
     setSelected(letter);
-    onAnswered(
-      letter === jawaban,
-      `${String(jawaban).toUpperCase()}. ${opsi[jawaban]}`
-    );
+    onAnswered(letter === jawaban, `${String(jawaban).toUpperCase()}. ${opsi[jawaban]}`, {
+      chosen: letter,
+    });
   }
 
   return (

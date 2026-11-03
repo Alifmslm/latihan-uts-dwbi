@@ -27,7 +27,7 @@ function buildSession(questions, mode) {
     ),
     screen: "quiz",
     index: 0,
-    correctCount: 0,
+    answers: {},
   };
 }
 
@@ -48,10 +48,19 @@ function QuizSession({ mode, questions }) {
     setSession(buildSession(questions, mode));
   }
 
-  function handleAnswer(isCorrect) {
-    if (isCorrect) {
-      setSession((prev) => ({ ...prev, correctCount: prev.correctCount + 1 }));
-    }
+  function handleAnswer(isCorrect, correctAnswer = "", details = {}) {
+    setSession((prev) => ({
+      ...prev,
+      answers: {
+        ...prev.answers,
+        [prev.index]: {
+          isCorrect,
+          correctAnswer,
+          chosen: details.chosen ?? null,
+          placements: details.placements ?? null,
+        },
+      },
+    }));
   }
 
   function handleNext() {
@@ -61,6 +70,10 @@ function QuizSession({ mode, questions }) {
       }
       return { ...prev, index: prev.index + 1 };
     });
+  }
+
+  function handlePrev() {
+    setSession((prev) => ({ ...prev, index: Math.max(0, prev.index - 1) }));
   }
 
   if (session.questions.length === 0) {
@@ -80,11 +93,15 @@ function QuizSession({ mode, questions }) {
     );
   }
 
+  const correctCount = Object.values(session.answers).filter(
+    (answer) => answer.isCorrect
+  ).length;
+
   if (session.screen === "result") {
     return (
       <Result
         total={session.questions.length}
-        correct={session.correctCount}
+        correct={correctCount}
         modeLabel={mode.label}
         onRepeat={restart}
         onMenu={backToMenu}
@@ -103,7 +120,9 @@ function QuizSession({ mode, questions }) {
       modeLabel={mode.label}
       onAnswer={handleAnswer}
       onNext={handleNext}
+      onPrev={handlePrev}
       onBack={backToMenu}
+      review={session.answers[session.index] ?? null}
     />
   );
 }

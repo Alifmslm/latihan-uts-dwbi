@@ -33,6 +33,10 @@ npm run preview
 - Tombol **← Kembali ke Menu** tersedia di setiap halaman kuis (dan layar
   hasil) untuk kembali ke menu utama kapan pun.
 - Soal diacak setiap sesi.
+- Tombol **← Sebelumnya** tersedia di setiap soal untuk kembali ke soal
+  sebelumnya; jawaban sebelumnya ditampilkan kembali dalam keadaan terkunci
+  (termasuk posisi drag & drop dan feedback), dan skor dihitung dari hasil
+  masing-masing soal.
 - Satu soal per halaman, lengkap dengan progres dan tombol Selanjutnya.
 - Feedback benar/salah langsung muncul beserta jawaban yang benar.
 - Skor akhir, jumlah benar/salah, tombol Ulangi dan Kembali ke Menu.

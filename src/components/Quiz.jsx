@@ -9,16 +9,22 @@ export default function Quiz({
   modeLabel,
   onAnswer,
   onNext,
+  onPrev,
   onBack,
+  review,
 }) {
-  const [feedback, setFeedback] = useState(null);
-  const answeredRef = useRef(false);
+  const [feedback, setFeedback] = useState(() =>
+    review
+      ? { isCorrect: review.isCorrect, correctAnswer: review.correctAnswer }
+      : null
+  );
+  const answeredRef = useRef(Boolean(review));
 
-  function handleAnswered(isCorrect, correctAnswer = "") {
+  function handleAnswered(isCorrect, correctAnswer = "", details = {}) {
     if (answeredRef.current) return;
     answeredRef.current = true;
     setFeedback({ isCorrect, correctAnswer });
-    onAnswer(isCorrect);
+    onAnswer(isCorrect, correctAnswer, details);
   }
 
   const isLast = index + 1 === total;
@@ -70,9 +76,9 @@ export default function Quiz({
         <h1 className="question-text">{question.soal}</h1>
 
         {isDragDrop ? (
-          <DragDrop question={question} onAnswered={handleAnswered} />
+          <DragDrop question={question} onAnswered={handleAnswered} review={review} />
         ) : (
-          <MultipleChoice question={question} onAnswered={handleAnswered} />
+          <MultipleChoice question={question} onAnswered={handleAnswered} review={review} />
         )}
 
         {feedback && (
@@ -105,15 +111,27 @@ export default function Quiz({
 
       <div className="quiz-footer">
         <p className="hint">{hint}</p>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={onNext}
-          disabled={!feedback}
-        >
-          {isLast ? "Lihat Hasil" : "Selanjutnya"}
-          <span aria-hidden="true">→</span>
-        </button>
+        <div className="quiz-actions">
+          {onPrev && (
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={onPrev}
+              disabled={index === 0}
+            >
+              <span aria-hidden="true">←</span> Sebelumnya
+            </button>
+          )}
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={onNext}
+            disabled={!feedback}
+          >
+            {isLast ? "Lihat Hasil" : "Selanjutnya"}
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
       </div>
     </section>
   );

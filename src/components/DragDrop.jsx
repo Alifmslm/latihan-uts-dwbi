@@ -152,10 +152,10 @@ function Target({
   );
 }
 
-export default function DragDrop({ question, onAnswered }) {
+export default function DragDrop({ question, onAnswered, review }) {
   const { items, targets, jawaban } = question;
-  const [placements, setPlacements] = useState({});
-  const [checked, setChecked] = useState(false);
+  const [placements, setPlacements] = useState(() => review?.placements ?? {});
+  const [checked, setChecked] = useState(Boolean(review));
   const [activeItem, setActiveItem] = useState(null);
 
   const sensors = useSensors(
@@ -241,7 +241,7 @@ export default function DragDrop({ question, onAnswered }) {
     });
 
     setChecked(true);
-    onAnswered(allCorrect);
+    onAnswered(allCorrect, "", { placements });
   }
 
   return (
