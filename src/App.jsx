@@ -5,8 +5,10 @@ import {
   Routes,
   useNavigate,
   useParams,
+  useSearchParams,
 } from "react-router-dom";
 import Menu from "./components/Menu";
+import Customize from "./components/Customize";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
 import { MODES, QUESTION_LIMIT, modeByPath } from "./modes";
@@ -19,12 +21,17 @@ function normalizeQuestion(question) {
   };
 }
 
-function buildSession(questions, mode) {
+function resolveLimit(poolSize, param) {
+  const parsed = Number.parseInt(param ?? "", 10);
+  if (!Number.isFinite(parsed)) return Math.min(QUESTION_LIMIT, poolSize);
+  return Math.max(1, Math.min(parsed, poolSize));
+}
+
+function buildSession(questions, mode, limit) {
+  const pool = questions.filter(mode.filter);
+  const size = resolveLimit(pool.length, limit);
   return {
-    questions: shuffle(questions.filter(mode.filter)).slice(
-      0,
-      QUESTION_LIMIT
-    ),
+    questions: shuffle(pool).slice(0, size),
     screen: "quiz",
     index: 0,
     answers: {},
@@ -33,19 +40,29 @@ function buildSession(questions, mode) {
 
 function QuizRoute({ questions }) {
   const { modePath } = useParams();
+  const [searchParams] = useSearchParams();
   const mode = modeByPath(modePath);
 
   if (!mode) return <Navigate to="/" replace />;
-  return <QuizSession key={mode.id} mode={mode} questions={questions} />;
+
+  const jumlah = searchParams.get("jumlah") ?? "default";
+  return (
+    <QuizSession
+      key={`${mode.id}-${jumlah}`}
+      mode={mode}
+      questions={questions}
+      jumlah={jumlah === "default" ? null : jumlah}
+    />
+  );
 }
 
-function QuizSession({ mode, questions }) {
+function QuizSession({ mode, questions, jumlah }) {
   const navigate = useNavigate();
   const backToMenu = () => navigate("/");
-  const [session, setSession] = useState(() => buildSession(questions, mode));
+  const [session, setSession] = useState(() => buildSession(questions, mode, jumlah));
 
   function restart() {
-    setSession(buildSession(questions, mode));
+    setSession(buildSession(questions, mode, jumlah));
   }
 
   function handleAnswer(isCorrect, correctAnswer = "", details = {}) {
@@ -129,6 +146,7 @@ function QuizSession({ mode, questions }) {
 
 function MenuRoute({ questions }) {
   const navigate = useNavigate();
+  const [selectedMode, setSelectedMode] = useState(null);
 
   const counts = useMemo(
     () =>
@@ -141,12 +159,25 @@ function MenuRoute({ questions }) {
     [questions]
   );
 
+  const mode = selectedMode ? MODES[selectedMode] : null;
+
+  if (mode) {
+    return (
+      <Customize
+        mode={mode}
+        count={counts[selectedMode] ?? 0}
+        onBack={() => setSelectedMode(null)}
+        onStart={(jumlah) => navigate(`/quiz/${mode.path}?jumlah=${jumlah}`)}
+      />
+    );
+  }
+
   return (
     <Menu
       modes={MODES}
       counts={counts}
       total={questions.length}
-      onSelect={(modeId) => navigate(`/quiz/${MODES[modeId].path}`)}
+      onSelect={setSelectedMode}
     />
   );
 }

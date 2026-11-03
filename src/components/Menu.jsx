@@ -1,5 +1,3 @@
-import { QUESTION_LIMIT } from "../modes";
-
 const ICONS = {
   campuran: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -33,8 +31,8 @@ export default function Menu({ modes, counts, total, onSelect }) {
           Uji pemahaman <span>Data Warehouse &amp; BI</span>
         </h1>
         <p>
-          Pilih mode latihan. Soal diacak setiap sesi, dan kamu langsung tahu jawaban
-          benar setelah menjawab.
+          Pilih mode latihan, atur jumlah soal sesuai kebutuhan. Soal diacak
+          setiap sesi, dan kamu langsung tahu jawaban benar setelah menjawab.
         </p>
       </div>
 
@@ -56,7 +54,7 @@ export default function Menu({ modes, counts, total, onSelect }) {
                 <span className="mode-count">
                   {count === 0
                     ? "Belum ada soal"
-                    : `${Math.min(count, QUESTION_LIMIT)} soal per sesi`}
+                    : `${count} soal tersedia`}
                 </span>
                 <span className="mode-arrow" aria-hidden="true">→</span>
               </span>
@@ -66,8 +64,7 @@ export default function Menu({ modes, counts, total, onSelect }) {
       </div>
 
       <p className="menu-foot">
-        Bank {total} soal · setiap sesi memuat maksimal {QUESTION_LIMIT} soal
-        acak
+        Bank {total} soal · jumlah soal per sesi bebas diatur
       </p>
     </section>
   );

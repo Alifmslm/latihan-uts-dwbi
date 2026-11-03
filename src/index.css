@@ -320,6 +320,135 @@ button {
   border-color: #c4c9f8;
 }
 
+/* ---------- Customize form ---------- */
+
+.customize {
+  animation: rise 0.28s ease-out;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.customize-card {
+  padding: 28px;
+}
+
+.customize-title {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.customize-sub {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.field {
+  display: block;
+  margin: 0 0 16px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.field-input {
+  width: 120px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-3);
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.field-input-invalid {
+  border-color: #f3a3b3;
+  background: var(--wrong-soft);
+}
+
+.field-max {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.field-hint {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.field-error {
+  display: block;
+  margin-top: 4px;
+  color: var(--wrong);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.num-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.num-chip {
+  padding: 9px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.num-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.num-chip-active,
+.num-chip-active:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.customize-start {
+  width: 100%;
+}
+
 /* ---------- Quiz shell ---------- */
 
 .quiz {

@@ -22,14 +22,15 @@ npm run preview
 ## Fitur
 
 - 3 mode: Soal Campuran, Pilihan Ganda, dan Drag & Drop.
-- Setiap sesi mengambil maksimal **35 soal acak** dari bank soal yang sesuai
-  mode (bank saat ini: 91 pilihan ganda + 26 drag & drop). Mode Drag & Drop
-  memuat 26 soal per sesi karena memang hanya itu yang tersedia.
+- Setiap mode punya form **Atur jumlah soal** sebelum mulai: input angka
+  (1–maksimal bank mode, mis. 10 soal), tombol cepat 5/10/15/20/25/35, dan
+  opsi "Semua". Default 35 soal (dibatasi ukuran bank).
 - Routing dengan `react-router-dom` (HashRouter, aman untuk hosting statis):
   - `/` — menu utama
-  - `/quiz/campuran` — soal campuran
-  - `/quiz/pilihan-ganda` — pilihan ganda saja
-  - `/quiz/drag-drop` — drag & drop saja
+  - `/quiz/campuran?jumlah=10` — soal campuran, 10 soal
+  - `/quiz/pilihan-ganda?jumlah=10` — pilihan ganda, 10 soal
+  - `/quiz/drag-drop` — drag & drop, default 35 (dibatasi 26)
+  - Parameter `jumlah` opsional; tanpa parameter, default 35 soal.
 - Tombol **← Kembali ke Menu** tersedia di setiap halaman kuis (dan layar
   hasil) untuk kembali ke menu utama kapan pun.
 - Soal diacak setiap sesi.
