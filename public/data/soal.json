@@ -1,15 +1,16 @@
 {
   "judul": "Bank Soal Latihan UTS DWBI (Topik 1-6)",
-  "total_soal": 74,
+  "total_soal": 84,
   "jumlah": {
-    "pilihan_ganda": 53,
-    "drag_drop": 21
+    "pilihan_ganda": 60,
+    "drag_drop": 24
   },
   "sumber": {
     "latihan_1_15apr2025": "Iseng Latihan 1 (attempt 15 Apr 2025)",
     "latihan_2_16apr2025_1820": "Iseng Latihan (attempt 16 Apr 2025, 18:20)",
     "latihan_3_16apr2025_1719": "Iseng Latihan 1 (attempt 16 Apr 2025, 17:19)",
-    "uts_2021_clo2": "UTS DWBI CLO 2 Reguler (13 Nov 2021)"
+    "uts_2021_clo2": "UTS DWBI CLO 2 Reguler (13 Nov 2021)",
+    "slide_dwbi_week7_9_kpi_2026": "Slide DWBI Week 7-9: Pengukuran Kinerja, KPI & OLAP (2026)"
   },
   "topik": {
     "1": "Pengantar Data Warehouse & ETL",
@@ -1092,6 +1093,146 @@
       "penjelasan": "OLAP menganalisis dan meringkas data terstruktur secara multidimensi dalam bentuk kubus."
     },
     {
+      "id": 92,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Tidak semua metric adalah KPI. Syarat agar sebuah metric disebut KPI adalah...",
+      "opsi": {
+        "a": "Dihitung dengan rumus yang tetap",
+        "b": "Ditampilkan dalam bentuk grafik",
+        "c": "Berupa angka mentah hasil pengukuran",
+        "d": "Terkait tujuan strategis serta memiliki target dan ambang"
+      },
+      "jawaban": "d",
+      "jawaban_teks": "Terkait tujuan strategis serta memiliki target dan ambang",
+      "penjelasan": "Measure adalah angka mentah, metric adalah measure dengan konteks atau rumus, sedangkan KPI adalah metric yang terkait tujuan strategis dan punya target serta ambang."
+    },
+    {
+      "id": 93,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Pada bisnis retail, jumlah kunjungan website dan jumlah prospek merupakan contoh indikator...",
+      "opsi": {
+        "a": "Leading",
+        "b": "Lagging",
+        "c": "Benchmark",
+        "d": "Trend"
+      },
+      "jawaban": "a",
+      "jawaban_teks": "Leading",
+      "penjelasan": "Leading indicator mendorong atau memprediksi hasil masa depan dan lebih mudah dipengaruhi (peringatan dini). Omzet dan laba adalah lagging indicator."
+    },
+    {
+      "id": 94,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Manakah yang merupakan contoh lagging indicator pada perguruan tinggi?",
+      "opsi": {
+        "a": "Kehadiran kuliah",
+        "b": "Frekuensi bimbingan",
+        "c": "Kelulusan tepat waktu",
+        "d": "Jumlah konsultasi dosen"
+      },
+      "jawaban": "c",
+      "jawaban_teks": "Kelulusan tepat waktu",
+      "penjelasan": "Lagging indicator mengukur hasil yang sudah terjadi, seperti kelulusan tepat waktu. Kehadiran kuliah dan frekuensi bimbingan adalah leading indicator."
+    },
+    {
+      "id": 95,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Sinyal visual yang menunjukkan seberapa baik kinerja terhadap target, sering berupa lampu lalu lintas, disebut komponen KPI...",
+      "opsi": {
+        "a": "Goal",
+        "b": "Trend",
+        "c": "Value",
+        "d": "Status"
+      },
+      "jawaban": "d",
+      "jawaban_teks": "Status",
+      "penjelasan": "Status adalah sinyal visual (hijau, kuning, merah) terhadap target. Goal adalah target, value adalah nilai aktual, trend adalah perbandingan dengan masa lalu."
+    },
+    {
+      "id": 96,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Omzet Agustus aktual Rp470 juta dengan target Rp500 juta. Dengan ambang ≥100% hijau, 80–99% kuning, <80% merah, status KPI-nya adalah...",
+      "opsi": {
+        "a": "Merah",
+        "b": "Hijau",
+        "c": "Kuning",
+        "d": "Biru"
+      },
+      "jawaban": "c",
+      "jawaban_teks": "Kuning",
+      "penjelasan": "Pencapaian = 470 ÷ 500 × 100% = 94%, berada di rentang 80–99% sehingga berstatus Kuning."
+    },
+    {
+      "id": 97,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "KPI \"Meningkatkan on-time delivery rate dari 88% menjadi 95% pada akhir Q2 2026 di seluruh gudang regional Jawa\" memenuhi aspek Time-bound karena...",
+      "opsi": {
+        "a": "Menyebut angka awal dan target (88% ke 95%)",
+        "b": "Menyebut batas waktu akhir Q2 2026",
+        "c": "Menyebut cakupan gudang regional Jawa",
+        "d": "Berdampak pada kepuasan pelanggan"
+      },
+      "jawaban": "b",
+      "jawaban_teks": "Menyebut batas waktu akhir Q2 2026",
+      "penjelasan": "Time-bound berarti punya periode atau batas waktu, di sini akhir Q2 2026. Angka 88% ke 95% menunjukkan measurable, cakupan gudang menunjukkan specific."
+    },
+    {
+      "id": 98,
+      "tipe": "pilihan_ganda",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "KPI omzet September berstatus merah (capaian 76%). Untuk menelusuri wilayah dan kategori penyebabnya, operasi OLAP yang digunakan adalah...",
+      "opsi": {
+        "a": "Roll-up",
+        "b": "Slice",
+        "c": "Drill-down",
+        "d": "Pivot"
+      },
+      "jawaban": "c",
+      "jawaban_teks": "Drill-down",
+      "penjelasan": "Drill-down menurunkan KPI ke level lebih detail (nasional, wilayah, kategori) untuk menemukan penyebab, bagian dari alur closed-loop."
+    },
+    {
       "id": 101,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
@@ -1673,6 +1814,99 @@
         "Index": "Struktur untuk mempercepat pencarian data"
       },
       "penjelasan": "WITH ROLLUP (MySQL) menghasilkan subtotal bertingkat dan grand total. Subquery, view, dan index adalah konsep SQL pendukung."
+    },
+    {
+      "id": 127,
+      "tipe": "drag_drop",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Cocokkan konsep pengukuran kinerja dengan definisinya",
+      "items": [
+        "Measure",
+        "Metric",
+        "KPI",
+        "Dashboard"
+      ],
+      "targets": [
+        "Angka mentah hasil pengukuran, mis. omzet Rp480 juta",
+        "Measure dengan konteks atau rumus, mis. pertumbuhan omzet bulanan",
+        "Metric yang terkait tujuan strategis, punya target dan ambang",
+        "Tampilan terpadu dari beberapa KPI"
+      ],
+      "jawaban": {
+        "Measure": "Angka mentah hasil pengukuran, mis. omzet Rp480 juta",
+        "Metric": "Measure dengan konteks atau rumus, mis. pertumbuhan omzet bulanan",
+        "KPI": "Metric yang terkait tujuan strategis, punya target dan ambang",
+        "Dashboard": "Tampilan terpadu dari beberapa KPI"
+      },
+      "penjelasan": "Urutannya dari yang paling mentah: measure, metric (ada konteks), KPI (ada tujuan strategis, target, ambang), lalu dashboard yang menampilkan banyak KPI."
+    },
+    {
+      "id": 128,
+      "tipe": "drag_drop",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Cocokkan jenis visualisasi KPI dengan cirinya",
+      "items": [
+        "Traffic light",
+        "Text-based",
+        "Gauge",
+        "Bullet graph",
+        "Sparkline"
+      ],
+      "targets": [
+        "Bar nilai dengan penanda target, intuitif tetapi boros ruang",
+        "Grafik garis mini untuk menunjukkan tren tanpa nilai presisi",
+        "Lampu 3 warna menunjukkan status, cepat dibaca tetapi tidak menampilkan nilai",
+        "Angka atau teks diwarnai sesuai status, padat dan cocok untuk tabel KPI",
+        "Nilai, target, dan rentang dalam satu grafik ringkas, cocok untuk banyak KPI"
+      ],
+      "jawaban": {
+        "Traffic light": "Lampu 3 warna menunjukkan status, cepat dibaca tetapi tidak menampilkan nilai",
+        "Text-based": "Angka atau teks diwarnai sesuai status, padat dan cocok untuk tabel KPI",
+        "Gauge": "Bar nilai dengan penanda target, intuitif tetapi boros ruang",
+        "Bullet graph": "Nilai, target, dan rentang dalam satu grafik ringkas, cocok untuk banyak KPI",
+        "Sparkline": "Grafik garis mini untuk menunjukkan tren tanpa nilai presisi"
+      },
+      "penjelasan": "Bullet graph (Stephen Few) dirancang sebagai pengganti gauge yang lebih hemat ruang. Sparkline fokus pada tren, traffic light fokus pada status."
+    },
+    {
+      "id": 129,
+      "tipe": "drag_drop",
+      "kategori": "Business Performance Management & KPI",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
+      "sumber": [
+        "slide_dwbi_week7_9_kpi_2026"
+      ],
+      "soal": "Cocokkan perspektif Balanced Scorecard dengan contoh KPI bisnis retail",
+      "items": [
+        "Keuangan",
+        "Pelanggan",
+        "Proses internal",
+        "Learning & growth"
+      ],
+      "targets": [
+        "Waktu pemrosesan pesanan dan tingkat retur",
+        "Produktivitas karyawan dan jam pelatihan",
+        "Pertumbuhan omzet dan margin laba",
+        "Kepuasan dan loyalitas pelanggan"
+      ],
+      "jawaban": {
+        "Keuangan": "Pertumbuhan omzet dan margin laba",
+        "Pelanggan": "Kepuasan dan loyalitas pelanggan",
+        "Proses internal": "Waktu pemrosesan pesanan dan tingkat retur",
+        "Learning & growth": "Produktivitas karyawan dan jam pelatihan"
+      },
+      "penjelasan": "Empat perspektif BSC: Keuangan (pemegang saham), Pelanggan, Proses internal (proses yang harus unggul), dan Learning & growth (kemampuan berkembang)."
     }
   ]
 }
