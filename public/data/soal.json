@@ -1,16 +1,31 @@
 {
-  "judul": "Bank Soal Latihan UTS DWBI",
-  "total_soal": 117,
+  "judul": "Bank Soal Latihan UTS DWBI (Topik 1-6)",
+  "total_soal": 74,
+  "jumlah": {
+    "pilihan_ganda": 53,
+    "drag_drop": 21
+  },
   "sumber": {
     "latihan_1_15apr2025": "Iseng Latihan 1 (attempt 15 Apr 2025)",
     "latihan_2_16apr2025_1820": "Iseng Latihan (attempt 16 Apr 2025, 18:20)",
     "latihan_3_16apr2025_1719": "Iseng Latihan 1 (attempt 16 Apr 2025, 17:19)",
     "uts_2021_clo2": "UTS DWBI CLO 2 Reguler (13 Nov 2021)"
   },
+  "topik": {
+    "1": "Pengantar Data Warehouse & ETL",
+    "2": "Metodologi Data Warehouse & Dimensional Modeling",
+    "3": "Slowly Changing Dimension (SCD)",
+    "4": "Online Analytical Processing (OLAP)",
+    "5": "Cloud Data Warehouse (CDW) & Google BigQuery",
+    "6": "Business Performance Management (BPM) & KPI"
+  },
   "soal": [
     {
       "id": 1,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -22,11 +37,15 @@
         "d": "Slice"
       },
       "jawaban": "a",
-      "jawaban_teks": "Roll-up"
+      "jawaban_teks": "Roll-up",
+      "penjelasan": "Roll-up meringkas data ke level hierarki yang lebih tinggi. Dari bulan ke tahun berarti naik satu level pada dimensi waktu."
     },
     {
       "id": 2,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -38,11 +57,15 @@
         "d": "Bottom-up approach dengan Data Mart Bus"
       },
       "jawaban": "d",
-      "jawaban_teks": "Bottom-up approach dengan Data Mart Bus"
+      "jawaban_teks": "Bottom-up approach dengan Data Mart Bus",
+      "penjelasan": "Bottom-up ala Kimball membangun data mart per proses bisnis lebih dulu, lalu mengintegrasikannya lewat conformed dimensions pada Data Mart Bus."
     },
     {
       "id": 3,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025",
         "latihan_2_16apr2025_1820"
@@ -55,11 +78,15 @@
         "d": "Urutan pembangunan (top-down vs. bottom-up)"
       },
       "jawaban": "d",
-      "jawaban_teks": "Urutan pembangunan (top-down vs. bottom-up)"
+      "jawaban_teks": "Urutan pembangunan (top-down vs. bottom-up)",
+      "penjelasan": "Inmon membangun EDW terpusat dulu (top-down), Kimball membangun data mart dulu (bottom-up). Perbedaan intinya ada di urutan pembangunan."
     },
     {
       "id": 4,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 3,
+      "nama_topik": "Slowly Changing Dimension (SCD)",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -71,11 +98,16 @@
         "d": "SCD Tipe 3"
       },
       "jawaban": "a",
-      "jawaban_teks": "SCD Tipe 4"
+      "jawaban_teks": "SCD Tipe 4",
+      "penjelasan": "Data lama dipindah ke tabel historis dan tabel utama hanya berisi data terkini. Menurut kunci LMS ini SCD Tipe 4.",
+      "catatan": "Kunci jawaban dari LMS (SCD Tipe 4 = histori di tabel terpisah). Di materi kuliah, Tipe 4 dijelaskan sebagai mini-dimension, jadi cek ulang ke dosen/slide."
     },
     {
       "id": 5,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -87,11 +119,15 @@
         "d": "Per lisensi tahunan"
       },
       "jawaban": "b",
-      "jawaban_teks": "Berbasis penggunaan (OpEx)"
+      "jawaban_teks": "Berbasis penggunaan (OpEx)",
+      "penjelasan": "Cloud DW memakai model bayar sesuai pemakaian (pay-as-you-go), sehingga biayanya operasional (OpEx), bukan investasi awal (CapEx)."
     },
     {
       "id": 6,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -103,11 +139,15 @@
         "d": "Harus membeli perangkat keras tambahan untuk menambah kapasitas"
       },
       "jawaban": "b",
-      "jawaban_teks": "Dapat dengan cepat diskalakan sesuai kebutuhan pengguna"
+      "jawaban_teks": "Dapat dengan cepat diskalakan sesuai kebutuhan pengguna",
+      "penjelasan": "Resource cloud bersifat elastis: kapasitas bisa dinaikkan atau diturunkan cepat tanpa membeli perangkat keras."
     },
     {
       "id": 7,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_1_15apr2025",
         "latihan_3_16apr2025_1719"
@@ -120,11 +160,15 @@
         "d": "Metadata ETL"
       },
       "jawaban": "d",
-      "jawaban_teks": "Metadata ETL"
+      "jawaban_teks": "Metadata ETL",
+      "penjelasan": "Metadata ETL menyimpan log dan statistik proses ETL (waktu jalan, jumlah baris, error), jadi dipakai untuk memantau performa ETL."
     },
     {
       "id": 8,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_1_15apr2025",
         "latihan_3_16apr2025_1719"
@@ -137,11 +181,15 @@
         "d": "Karena data terhapus secara otomatis"
       },
       "jawaban": "a",
-      "jawaban_teks": "Karena data tetap stabil dan tidak diubah oleh sistem operasional"
+      "jawaban_teks": "Karena data tetap stabil dan tidak diubah oleh sistem operasional",
+      "penjelasan": "Non-volatile: data yang sudah dimuat ke DW stabil, tidak diubah atau dihapus oleh sistem operasional, hanya ditambah lewat proses load."
     },
     {
       "id": 9,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -153,11 +201,15 @@
         "d": "Data Mart Bus Architecture"
       },
       "jawaban": "c",
-      "jawaban_teks": "Hub-and-Spoke Architecture"
+      "jawaban_teks": "Hub-and-Spoke Architecture",
+      "penjelasan": "Hub-and-Spoke: EDW pusat sebagai hub, data mart dependen sebagai spoke yang diturunkan dari EDW. Ini ciri pendekatan Inmon."
     },
     {
       "id": 10,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -169,11 +221,15 @@
         "d": "Untuk menjaga integritas data historis bagi analisis"
       },
       "jawaban": "d",
-      "jawaban_teks": "Untuk menjaga integritas data historis bagi analisis"
+      "jawaban_teks": "Untuk menjaga integritas data historis bagi analisis",
+      "penjelasan": "Data yang tidak diubah menjaga histori tetap utuh dan konsisten, sehingga analisis tren dapat dipercaya."
     },
     {
       "id": 11,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -185,11 +241,15 @@
         "d": "Data Mart"
       },
       "jawaban": "b",
-      "jawaban_teks": "Operating System"
+      "jawaban_teks": "Operating System",
+      "penjelasan": "Komponen DW: data source, ETL, penyimpanan DW/data mart, dan tools akses/BI. Operating System bukan komponen arsitektur DW."
     },
     {
       "id": 12,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -201,11 +261,15 @@
         "d": "Dice"
       },
       "jawaban": "d",
-      "jawaban_teks": "Dice"
+      "jawaban_teks": "Dice",
+      "penjelasan": "Dice memfilter dua dimensi atau lebih sekaligus (bulan Maret dan wilayah Jabodetabek). Slice hanya memfilter satu dimensi."
     },
     {
       "id": 13,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -217,11 +281,15 @@
         "d": "Star Schema"
       },
       "jawaban": "a",
-      "jawaban_teks": "Fact Constellation Schema"
+      "jawaban_teks": "Fact Constellation Schema",
+      "penjelasan": "Dua tabel fakta (Perjalanan, Pembayaran) yang berbagi dimensi yang sama adalah Fact Constellation (Galaxy) Schema."
     },
     {
       "id": 14,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -233,11 +301,15 @@
         "d": "Federated"
       },
       "jawaban": "b",
-      "jawaban_teks": "Inmon"
+      "jawaban_teks": "Inmon",
+      "penjelasan": "Inmon membangun EDW berlingkup enterprise sejak awal (top-down), baru kemudian data mart."
     },
     {
       "id": 15,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_1_15apr2025",
         "latihan_2_16apr2025_1820",
@@ -251,11 +323,15 @@
         "d": "Independent Data Marts"
       },
       "jawaban": "d",
-      "jawaban_teks": "Independent Data Marts"
+      "jawaban_teks": "Independent Data Marts",
+      "penjelasan": "Data mart berdiri sendiri tanpa warehouse pusat atau dimensi bersama adalah Independent Data Marts, rawan inkonsistensi dan sulit diintegrasikan."
     },
     {
       "id": 16,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -267,11 +343,15 @@
         "d": "Data lake"
       },
       "jawaban": "a",
-      "jawaban_teks": "Enterprise Data Warehouse (EDW)"
+      "jawaban_teks": "Enterprise Data Warehouse (EDW)",
+      "penjelasan": "Pada pendekatan Inmon, Enterprise Data Warehouse dibangun lebih dulu, lalu data mart diturunkan darinya."
     },
     {
       "id": 17,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -283,11 +363,15 @@
         "d": "Kumpulan laporan pengguna"
       },
       "jawaban": "b",
-      "jawaban_teks": "Data hasil perhitungan, seperti penjualan, jumlah, dan kunci ke dimensi"
+      "jawaban_teks": "Data hasil perhitungan, seperti penjualan, jumlah, dan kunci ke dimensi",
+      "penjelasan": "Tabel fakta berisi measure numerik (penjualan, jumlah) dan foreign key ke dimensi. Atribut deskriptif ada di tabel dimensi."
     },
     {
       "id": 18,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_1_15apr2025",
         "latihan_3_16apr2025_1719"
@@ -300,11 +384,15 @@
         "d": "Dice"
       },
       "jawaban": "d",
-      "jawaban_teks": "Dice"
+      "jawaban_teks": "Dice",
+      "penjelasan": "Filter pada tiga dimensi sekaligus (produk, wilayah, tahun) adalah Dice."
     },
     {
       "id": 19,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -316,11 +404,15 @@
         "d": "Star Schema"
       },
       "jawaban": "a",
-      "jawaban_teks": "Fact Constellation Schema (Galaxy Schema)"
+      "jawaban_teks": "Fact Constellation Schema (Galaxy Schema)",
+      "penjelasan": "Skema dengan lebih dari satu tabel fakta yang berbagi dimensi disebut Fact Constellation atau Galaxy Schema."
     },
     {
       "id": 20,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "sumber": [
         "latihan_1_15apr2025"
       ],
@@ -332,11 +424,15 @@
         "d": "Public Cloud"
       },
       "jawaban": "a",
-      "jawaban_teks": "On-Premise Data Warehouse"
+      "jawaban_teks": "On-Premise Data Warehouse",
+      "penjelasan": "Regulasi data residency menuntut data tetap di lokasi tertentu, yang paling mudah dipenuhi dengan on-premise karena infrastrukturnya dikontrol sendiri."
     },
     {
       "id": 21,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -348,11 +444,15 @@
         "d": "Star Schema"
       },
       "jawaban": "c",
-      "jawaban_teks": "Fact Constellation Schema"
+      "jawaban_teks": "Fact Constellation Schema",
+      "penjelasan": "Fakta Pendaftaran Mahasiswa dan Pembayaran UKT berbagi dimensi Mahasiswa, Program Studi, dan Semester, jadi Fact Constellation."
     },
     {
       "id": 22,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -364,11 +464,15 @@
         "d": "Normalisasi data tingkat tinggi"
       },
       "jawaban": "b",
-      "jawaban_teks": "Pembuatan data mart tematik dan integrasi dimensi bersama (conformed dimensions)"
+      "jawaban_teks": "Pembuatan data mart tematik dan integrasi dimensi bersama (conformed dimensions)",
+      "penjelasan": "Kimball mengutamakan data mart tematik per proses bisnis yang diintegrasikan lewat conformed dimensions."
     },
     {
       "id": 23,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_2_16apr2025_1820",
         "latihan_3_16apr2025_1719"
@@ -381,11 +485,15 @@
         "d": "Pivot"
       },
       "jawaban": "a",
-      "jawaban_teks": "Filtering"
+      "jawaban_teks": "Filtering",
+      "penjelasan": "Filtering (mis. WHERE penjualan > 100 juta) bukan operasi dasar OLAP, tetapi sering dipakai bersama OLAP untuk menyaring berdasarkan nilai."
     },
     {
       "id": 24,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -397,11 +505,15 @@
         "d": "Biaya awal yang tinggi"
       },
       "jawaban": "b",
-      "jawaban_teks": "Skalabilitas yang fleksibel dan biaya berbasis penggunaan"
+      "jawaban_teks": "Skalabilitas yang fleksibel dan biaya berbasis penggunaan",
+      "penjelasan": "Keunggulan cloud: skalabilitas fleksibel dan biaya berbasis penggunaan, tanpa investasi awal besar."
     },
     {
       "id": 25,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -413,11 +525,15 @@
         "d": "3rd Normal Form (3NF)"
       },
       "jawaban": "b",
-      "jawaban_teks": "Star Schema dan Snowflake Schema"
+      "jawaban_teks": "Star Schema dan Snowflake Schema",
+      "penjelasan": "Kimball memakai model dimensional (star dan snowflake schema). 3NF adalah ciri EDW pada pendekatan Inmon."
     },
     {
       "id": 26,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_2_16apr2025_1820",
         "latihan_3_16apr2025_1719"
@@ -430,11 +546,15 @@
         "d": "Data Warehouse untuk transaksi harian"
       },
       "jawaban": "c",
-      "jawaban_teks": "Database operasional digunakan untuk operasi harian, DW untuk analisis historis"
+      "jawaban_teks": "Database operasional digunakan untuk operasi harian, DW untuk analisis historis",
+      "penjelasan": "Database operasional (OLTP) melayani transaksi harian, sedangkan DW dirancang untuk analisis data historis."
     },
     {
       "id": 27,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -446,11 +566,15 @@
         "d": "Roll-up"
       },
       "jawaban": "d",
-      "jawaban_teks": "Roll-up"
+      "jawaban_teks": "Roll-up",
+      "penjelasan": "Roll-up menggabungkan data ke level lebih tinggi pada hierarki waktu, dari mingguan ke bulanan."
     },
     {
       "id": 28,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -462,11 +586,15 @@
         "d": "Biaya awal yang sangat tinggi"
       },
       "jawaban": "c",
-      "jawaban_teks": "Ketergantungan pada vendor dan koneksi internet"
+      "jawaban_teks": "Ketergantungan pada vendor dan koneksi internet",
+      "penjelasan": "Risiko cloud: bergantung pada vendor (vendor lock-in) dan pada koneksi internet."
     },
     {
       "id": 29,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -478,11 +606,15 @@
         "d": "Menghapus data duplikat"
       },
       "jawaban": "b",
-      "jawaban_teks": "Menyambungkan data ke referensi tambahan untuk memperkaya informasi"
+      "jawaban_teks": "Menyambungkan data ke referensi tambahan untuk memperkaya informasi",
+      "penjelasan": "Lookup mencocokkan data dengan tabel referensi untuk menambah informasi, mis. kode produk menjadi nama produk."
     },
     {
       "id": 30,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -494,11 +626,15 @@
         "d": "Manual Input"
       },
       "jawaban": "a",
-      "jawaban_teks": "Delta/Incremental Extraction"
+      "jawaban_teks": "Delta/Incremental Extraction",
+      "penjelasan": "Delta/Incremental extraction hanya mengambil data baru atau berubah sejak ekstraksi terakhir (mis. lewat CDC). Full extraction mengambil semuanya."
     },
     {
       "id": 31,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -510,11 +646,15 @@
         "d": "Volatile"
       },
       "jawaban": "d",
-      "jawaban_teks": "Volatile"
+      "jawaban_teks": "Volatile",
+      "penjelasan": "Karakteristik DW: subject-oriented, integrated, time-variant, non-volatile. Volatile justru bertentangan dengan non-volatile."
     },
     {
       "id": 32,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -526,11 +666,15 @@
         "d": "Tidak mendukung waktu historis"
       },
       "jawaban": "b",
-      "jawaban_teks": "Data tidak berubah (non-volatile) setelah di-load"
+      "jawaban_teks": "Data tidak berubah (non-volatile) setelah di-load",
+      "penjelasan": "Data yang tidak berubah setelah di-load membuat hasil analisis konsisten dan bisa diulang."
     },
     {
       "id": 33,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -542,11 +686,15 @@
         "d": "Roll-up"
       },
       "jawaban": "c",
-      "jawaban_teks": "Drill-down"
+      "jawaban_teks": "Drill-down",
+      "penjelasan": "Drill-down bergerak dari level ringkas (nasional) ke level lebih detail (cabang)."
     },
     {
       "id": 34,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -558,11 +706,15 @@
         "d": "Multi-star Schema"
       },
       "jawaban": "c",
-      "jawaban_teks": "Fact Constellation Schema"
+      "jawaban_teks": "Fact Constellation Schema",
+      "penjelasan": "Fakta Klik Iklan dan Transaksi Pembelian berbagi dimensi Produk dan Waktu, jadi Fact Constellation."
     },
     {
       "id": 35,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -574,11 +726,15 @@
         "d": "Slice"
       },
       "jawaban": "d",
-      "jawaban_teks": "Slice"
+      "jawaban_teks": "Slice",
+      "penjelasan": "Slice memfilter satu dimensi (waktu = Januari 2025), dimensi lain tetap mencakup semua nilai."
     },
     {
       "id": 36,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_2_16apr2025_1820",
         "latihan_3_16apr2025_1719"
@@ -591,11 +747,15 @@
         "d": "Thomas H. Davenport"
       },
       "jawaban": "b",
-      "jawaban_teks": "William H. Inmon"
+      "jawaban_teks": "William H. Inmon",
+      "penjelasan": "William H. Inmon dikenal sebagai Bapak Data Warehouse dengan pendekatan top-down. Ralph Kimball mewakili bottom-up."
     },
     {
       "id": 37,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -607,11 +767,15 @@
         "d": "Tidak memiliki tabel fakta"
       },
       "jawaban": "b",
-      "jawaban_teks": "Dimensi dalam bentuk hierarki dan dinormalisasi"
+      "jawaban_teks": "Dimensi dalam bentuk hierarki dan dinormalisasi",
+      "penjelasan": "Snowflake: dimensi dinormalisasi menjadi sub-tabel berhierarki (mis. kota, provinsi, negara)."
     },
     {
       "id": 38,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "sumber": [
         "latihan_2_16apr2025_1820"
       ],
@@ -623,11 +787,15 @@
         "d": "Pengelolaan dilakukan oleh vendor cloud"
       },
       "jawaban": "a",
-      "jawaban_teks": "Data disimpan di pusat data milik organisasi"
+      "jawaban_teks": "Data disimpan di pusat data milik organisasi",
+      "penjelasan": "On-premise menyimpan data di pusat data milik organisasi, sehingga kontrol akses dan keamanannya ada di tangan sendiri."
     },
     {
       "id": 39,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -639,11 +807,15 @@
         "d": "Hybrid Schema"
       },
       "jawaban": "b",
-      "jawaban_teks": "Snowflake Schema"
+      "jawaban_teks": "Snowflake Schema",
+      "penjelasan": "Kota, Provinsi, dan Negara di tabel terpisah berarti dimensi dinormalisasi, ciri Snowflake Schema."
     },
     {
       "id": 40,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -655,11 +827,15 @@
         "d": "Hub-and-Spoke Architecture"
       },
       "jawaban": "a",
-      "jawaban_teks": "Federated Data Warehouse"
+      "jawaban_teks": "Federated Data Warehouse",
+      "penjelasan": "Federated DW membiarkan data tetap di sistem asal dan menyatukannya lewat virtualisasi dan metadata, tanpa satu warehouse pusat."
     },
     {
       "id": 41,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 3,
+      "nama_topik": "Slowly Changing Dimension (SCD)",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -671,11 +847,16 @@
         "d": "SCD Tipe 0"
       },
       "jawaban": "a",
-      "jawaban_teks": "SCD Tipe 4"
+      "jawaban_teks": "SCD Tipe 4",
+      "penjelasan": "Versi terkini di baris utama dan histori di tabel terpisah adalah SCD Tipe 4 menurut kunci LMS.",
+      "catatan": "Kunci jawaban dari LMS (SCD Tipe 4 = histori di tabel terpisah). Di materi kuliah, Tipe 4 dijelaskan sebagai mini-dimension, jadi cek ulang ke dosen/slide."
     },
     {
       "id": 42,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -687,11 +868,15 @@
         "d": "Dapat digunakan untuk analisis tren historis"
       },
       "jawaban": "a",
-      "jawaban_teks": "Menghapus data lama secara berkala"
+      "jawaban_teks": "Menghapus data lama secara berkala",
+      "penjelasan": "Time-variant berarti menyimpan histori jangka panjang untuk analisis tren. Menghapus data lama berkala bertentangan dengan itu."
     },
     {
       "id": 43,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -703,11 +888,15 @@
         "d": "Hub-and-Spoke Architecture"
       },
       "jawaban": "a",
-      "jawaban_teks": "Data Mart Bus Architecture"
+      "jawaban_teks": "Data Mart Bus Architecture",
+      "penjelasan": "Bottom-up dengan data mart yang berbagi dimensi waktu dan produk konsisten adalah Data Mart Bus Architecture."
     },
     {
       "id": 44,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -719,11 +908,15 @@
         "d": "Roll-up"
       },
       "jawaban": "b",
-      "jawaban_teks": "Dice"
+      "jawaban_teks": "Dice",
+      "penjelasan": "Filter pada dua dimensi (wilayah dan produk) adalah Dice."
     },
     {
       "id": 45,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -735,11 +928,15 @@
         "d": "Menyaring dan memindahkan data dari berbagai sumber ke Data Warehouse"
       },
       "jawaban": "d",
-      "jawaban_teks": "Menyaring dan memindahkan data dari berbagai sumber ke Data Warehouse"
+      "jawaban_teks": "Menyaring dan memindahkan data dari berbagai sumber ke Data Warehouse",
+      "penjelasan": "ETL mengekstrak data dari berbagai sumber, mentransformasinya (bersihkan, standarkan), lalu memuatnya ke DW."
     },
     {
       "id": 46,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -751,11 +948,15 @@
         "d": "Time-variant"
       },
       "jawaban": "b",
-      "jawaban_teks": "Non-volatile"
+      "jawaban_teks": "Non-volatile",
+      "penjelasan": "Data yang tidak boleh diubah setelah masuk DW adalah karakteristik non-volatile."
     },
     {
       "id": 47,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -767,11 +968,15 @@
         "d": "\"Use only unstructured data sources.\""
       },
       "jawaban": "b",
-      "jawaban_teks": "\"Start with the enterprise, then deliver data marts.\""
+      "jawaban_teks": "\"Start with the enterprise, then deliver data marts.\"",
+      "penjelasan": "Inmon: mulai dari enterprise (EDW), baru data mart. \"Build small, then integrate\" adalah gaya Kimball."
     },
     {
       "id": 48,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -783,11 +988,15 @@
         "d": "Roll-up"
       },
       "jawaban": "b",
-      "jawaban_teks": "Drill-down"
+      "jawaban_teks": "Drill-down",
+      "penjelasan": "Drill-down menelusuri data ke level lebih detail, di sini dari mingguan ke harian."
     },
     {
       "id": 49,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -799,11 +1008,15 @@
         "d": "Snowflake Schema"
       },
       "jawaban": "b",
-      "jawaban_teks": "Star Schema"
+      "jawaban_teks": "Star Schema",
+      "penjelasan": "Fakta langsung terhubung ke dimensi tanpa hierarki adalah Star Schema."
     },
     {
       "id": 50,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 3,
+      "nama_topik": "Slowly Changing Dimension (SCD)",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -815,11 +1028,15 @@
         "d": "SCD Tipe 1"
       },
       "jawaban": "d",
-      "jawaban_teks": "SCD Tipe 1"
+      "jawaban_teks": "SCD Tipe 1",
+      "penjelasan": "Hanya menyimpan status terakhir (menimpa data lama) adalah SCD Tipe 1."
     },
     {
       "id": 51,
+      "tipe": "pilihan_ganda",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "sumber": [
         "latihan_3_16apr2025_1719"
       ],
@@ -831,236 +1048,15 @@
         "d": "Federated Data Warehouse"
       },
       "jawaban": "a",
-      "jawaban_teks": "Centralized Data Warehouse"
-    },
-    {
-      "id": 52,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Regresi merupakan teknik analisis statitisk yang paling banyak digunakan. Salah satu manfaat dari regresi adalah",
-      "opsi": {
-        "a": "Membuktikan hipotesa",
-        "b": "Menunjukkan gambaran dari sebaran data",
-        "c": "Prediksi/peramalan (meramalkan nilai variabel tidak bebas apabila seluruh variabel bebas sudah diketahui nilainya)",
-        "d": "Menggambarkan sebaran atau distribusi data"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Prediksi/peramalan (meramalkan nilai variabel tidak bebas apabila seluruh variabel bebas sudah diketahui nilainya)"
-    },
-    {
-      "id": 53,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Diagram yang berupa pemetaan hierarki sebagai metode untuk menampilkan data hierarki menggunakan gambar bersarang (biasanya persegi panjang) yang menampilkan data hierarki sebagai sekumpulan persegi panjang bertingkat adalah …",
-      "opsi": {
-        "a": "Histogram",
-        "b": "Bullet",
-        "c": "Tree map",
-        "d": "Heatmap"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Tree map"
-    },
-    {
-      "id": 54,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Tujuan utama dari visualisasi data adalah",
-      "opsi": {
-        "a": "Memepermudah pemangku kepentingan dalam mengambil keputusan berdasarkan data yang ditampilkan",
-        "b": "Mempermudah dalam mempelajari data atau informasi",
-        "c": "Menampilkan data atau informasi menjadi lebih menarik",
-        "d": "Mengkomunikasikan informasi secara jelas dan efisien kepada pengguna lewat grafik informasi"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Mengkomunikasikan informasi secara jelas dan efisien kepada pengguna lewat grafik informasi"
-    },
-    {
-      "id": 55,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Jenis grafik yang cocok untuk memvisualisasikan kata yang banyak dibicarakan dalam suatu topik obrolan di media sosial adalah",
-      "opsi": {
-        "a": "gantt chart",
-        "b": "bar chart",
-        "c": "wordcloud",
-        "d": "pie chart"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "wordcloud"
-    },
-    {
-      "id": 56,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Pada sebuah data medis hasil pemeriksaan laboratorium, nilai numerik harus dicatat ke tempat desimal yang sesuai untuk interpretasi yang baik dari hasil tes. Karakteristik data readiness seperti contoh di atas dimana nilai data didefinisikan pada tingkat detail untuk tujuan penggunaan data dinamakan …",
-      "opsi": {
-        "a": "Data granularity",
-        "b": "Data consistency",
-        "c": "Data relevancy",
-        "d": "Data accuracy"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Data granularity"
-    },
-    {
-      "id": 57,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Variabel usia, jumlah anak, total pendapatan rumah tangga (dalam Rupiah), jarak perjalanan (dalam Km/jam), dan suhu (dalam derajat Celcius). Taksonomi data tersebut dinamakan …",
-      "opsi": {
-        "a": "Nominal",
-        "b": "Ratio",
-        "c": "Numeric",
-        "d": "Categorical"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Numeric"
-    },
-    {
-      "id": 58,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Metode matematika yang digunakan untuk memperkirakan atau menggambarkan tingkat variasi dalam variabel tertentu yang menarik adalah pengertian dari…",
-      "opsi": {
-        "a": "Variance",
-        "b": "Measures of Dispersion",
-        "c": "Standard Deviation",
-        "d": "Quartiles and interquartile range"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Measures of Dispersion"
-    },
-    {
-      "id": 59,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Variabel pengukuran yang biasa ditemukan dalam ilmu fisika dan teknik, seperti massa, panjang, waktu, sudut bidang, energi, dan muatan listrik adalah contoh data taxonomy yang dinamakan …",
-      "opsi": {
-        "a": "Interval data",
-        "b": "Ordinal data",
-        "c": "Numeric data",
-        "d": "Ratio data"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Ratio data"
-    },
-    {
-      "id": 60,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Pengukuran dispersi merupakan metode matematis yang digunakan untuk memperkirakan atau menggambarkan tingkat variasi dalam variabel minat tertentu dan merupakan representasi dari penyebaran numerik dari kumpulan data tertentu. Berikut ini yang bukan termasuk pengukuran dispersi adalah …",
-      "opsi": {
-        "a": "Variance",
-        "b": "Skewness",
-        "c": "Standard Deviation",
-        "d": "Quartiles and interquartile range"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Skewness"
-    },
-    {
-      "id": 61,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Representasi dari data yang diubah menjadi kelompok tanpa melihat urutan dari setiap kelompok data, contohnya adalah ‘status pernikahan’, dalam taxonomy data disebut ..",
-      "opsi": {
-        "a": "Numerical",
-        "b": "Ordinal",
-        "c": "Text",
-        "d": "Interval"
-      },
-      "jawaban": "b",
-      "catatan": "Kunci jawaban dari LMS. Secara teori status pernikahan adalah data nominal (lihat soal 'Status pernikahan seseorang adalah contoh dari …').",
-      "jawaban_teks": "Ordinal"
-    },
-    {
-      "id": 62,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Mengurangi rentang data di setiap variabel bernilai numerik ke rentang standar dengan menggunakan teknik normalisasi atau penskalaan adalah proses",
-      "opsi": {
-        "a": "Reduce dimension",
-        "b": "Reduce noise",
-        "c": "Normalize data",
-        "d": "Balance data"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Normalize data"
-    },
-    {
-      "id": 63,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Hypothesis testing merupakan contoh dari implementasi …",
-      "opsi": {
-        "a": "OLAP",
-        "b": "OLTP",
-        "c": "Descriptive Statistics",
-        "d": "Inferential Statistics"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Inferential Statistics"
-    },
-    {
-      "id": 64,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Menskalakan nilai dalam rentang 0 - 1 pada transformasi data dikenal dengan istilah …",
-      "opsi": {
-        "a": "Discretize Data",
-        "b": "Reduce Attribute",
-        "c": "Normalize Data",
-        "d": "Balance Skewed Data"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Normalize Data"
-    },
-    {
-      "id": 65,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Business report dapat dibuat dalam format di bawah ini, kecuali ..",
-      "opsi": {
-        "a": "Metric management reports",
-        "b": "Dashboard type reports",
-        "c": "Balanced scorecard reports",
-        "d": "Database management"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Database management"
+      "jawaban_teks": "Centralized Data Warehouse",
+      "penjelasan": "Satu warehouse pusat tanpa data mart individual adalah Centralized Data Warehouse."
     },
     {
       "id": 66,
+      "tipe": "pilihan_ganda",
       "kategori": "Analitik, Statistik & Visualisasi",
+      "topik": 6,
+      "nama_topik": "Business Performance Management (BPM) & KPI",
       "sumber": [
         "uts_2021_clo2"
       ],
@@ -1072,188 +1068,15 @@
         "d": "key performance indicators"
       },
       "jawaban": "b",
-      "jawaban_teks": "Balanced Scorecard"
-    },
-    {
-      "id": 67,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Data penjualan di sebuah toko swalayan adalah sebagai berikut. Data seperti contoh di atas dinamakan …",
-      "opsi": {
-        "a": "Data terstruktur",
-        "b": "Data semi terstruktur",
-        "c": "Data tidak terstruktur",
-        "d": "Semuanya benar"
-      },
-      "jawaban": "a",
-      "catatan": "Soal merujuk ke tabel data penjualan yang tidak muncul pada PDF.",
-      "jawaban_teks": "Data terstruktur"
-    },
-    {
-      "id": 68,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Suhu celcius merupakan contoh dari …",
-      "opsi": {
-        "a": "Ordinal Data",
-        "b": "Nominal Data",
-        "c": "Interval Data",
-        "d": "Ratio Data"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Interval Data"
-    },
-    {
-      "id": 69,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Yang termasuk jenis data ordinal adalah",
-      "opsi": {
-        "a": "Data pengukuran suhu",
-        "b": "Data jumlah penduduk",
-        "c": "Data binomial (yes/no)",
-        "d": "Rentang nilai mata kuliah mahasiswa"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Rentang nilai mata kuliah mahasiswa"
-    },
-    {
-      "id": 70,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Raw Data Source -> (1) Data Transformation -> (2) Data Cleaning -> (3) Data Reduction -> (4) Data Consolidation -> Well Formed Data. Susunan langkah Data Preprocessing yang tepat adalah …",
-      "opsi": {
-        "a": "3-2-4-1",
-        "b": "4-2-1-3",
-        "c": "4-1-3-2",
-        "d": "2-3-4-1"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "4-2-1-3"
-    },
-    {
-      "id": 71,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "PT. XYZ ingin memantau hubungan total penjualan barang dengan biaya yang dikeluarkan untuk pengiklanan produk. Berdasarkan kasus ini maka jenis grafik yang cocok digunakan adalah ...",
-      "opsi": {
-        "a": "Bar Chat",
-        "b": "Scatterplot",
-        "c": "Tree map",
-        "d": "Boxplot"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Scatterplot"
-    },
-    {
-      "id": 72,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Dalam regresi linier, persebaran kesalahan dari nilai prediksi harus konsisten merupakan asumsi yang dikenal dengan istilah …",
-      "opsi": {
-        "a": "Linearity",
-        "b": "Constant Variance",
-        "c": "Multicollinearity",
-        "d": "Independence"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Constant Variance"
-    },
-    {
-      "id": 73,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Status pernikahan seseorang adalah contoh dari …",
-      "opsi": {
-        "a": "Ordinal Data",
-        "b": "Nominal Data",
-        "c": "Interval Data",
-        "d": "Ratio Data"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Nominal Data"
-    },
-    {
-      "id": 74,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Metode statistik dalam business report dapat dikategorikan dalam",
-      "opsi": {
-        "a": "Descriptive atau inferential",
-        "b": "Descriptive atau narative",
-        "c": "Narative atau inferential",
-        "d": "Inferential atau differential"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Descriptive atau inferential"
-    },
-    {
-      "id": 75,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Diagnosis stunting pada anak-anak dapat dilakukan dengan pemeriksaan fisik, seperti pengukuran berat badan, tinggi badan, dan lingkar kepala. Taksonomi data yang didapat pada diagnosis stunting tersebut dinamakan …",
-      "opsi": {
-        "a": "Nominal",
-        "b": "Ordinal",
-        "c": "Interval",
-        "d": "Ratio"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Ratio"
-    },
-    {
-      "id": 76,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Dalam asumsi pada regresi linear, asumsi yang menyatakan bahwa kesalahan dari variabel respon tidak berkorelasi satu sama lain merupakan asumsi",
-      "opsi": {
-        "a": "Linearity",
-        "b": "Independence (of error)",
-        "c": "Normality (of error)",
-        "d": "Constant variant (of error)"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Independence (of error)"
-    },
-    {
-      "id": 77,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Kepala Puskesmas ingin melihat jumlah balita yang mengalami kasus Stunting pada di 5 Posyandu dengan tujuan untuk perbandingan di Posyandu mana yang paling banyak terjadi stunting. Untuk memudahkan melihat Posyandu mana yang paling sedikit hingga yang paling banyak, maka grafik yang tepat untuk visualisasi data tersebut adalah …",
-      "opsi": {
-        "a": "Line Chart",
-        "b": "Bar Chart",
-        "c": "Bubble Chart",
-        "d": "Pie Chart"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Bar Chart"
+      "jawaban_teks": "Balanced Scorecard",
+      "penjelasan": "Balanced Scorecard memadukan 4 perspektif: keuangan, pelanggan, proses bisnis internal, serta pembelajaran dan pertumbuhan."
     },
     {
       "id": 78,
+      "tipe": "pilihan_ganda",
       "kategori": "Analitik, Statistik & Visualisasi",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "sumber": [
         "uts_2021_clo2"
       ],
@@ -1265,220 +1088,15 @@
         "d": "OLAP"
       },
       "jawaban": "d",
-      "jawaban_teks": "OLAP"
-    },
-    {
-      "id": 79,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Manakah di bawah ini yang tidak termasuk dalam kunci kesuksesan sebuah reporting ..",
-      "opsi": {
-        "a": "Clarity",
-        "b": "Brevity",
-        "c": "Open",
-        "d": "Correctness"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Open"
-    },
-    {
-      "id": 80,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Jika ditemukan data yang tidak seimbang (imbalanced data) maka sebaiknya dilakukan proses data reduction berupa …",
-      "opsi": {
-        "a": "Construct Attribute",
-        "b": "Reduce Attribute",
-        "c": "Normalize Data",
-        "d": "Oversampling Data"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Oversampling Data"
-    },
-    {
-      "id": 81,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Salah satu karakteristik dari kesiapan data untuk studi analitik adalah setiap elemen dari data tersedia di dataset atau dapat disebut ..",
-      "opsi": {
-        "a": "Data source reliability",
-        "b": "Data source accuracy",
-        "c": "Data accessibility",
-        "d": "Data richness"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Data richness"
-    },
-    {
-      "id": 82,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Fakta sederhana, tidak terorganisir dan tidak diproses merupakan ciri dari...",
-      "opsi": {
-        "a": "Data",
-        "b": "Informasi",
-        "c": "Pengetahuan",
-        "d": "Kebijakan"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Data"
-    },
-    {
-      "id": 83,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Proses yang terdapat dalam data preprocessing adalah…",
-      "opsi": {
-        "a": "Data collection – data cleaning – data transformation – data reduction",
-        "b": "data consolidation – data cleaning – data transformation – data reduction",
-        "c": "Data collection – data cleaning – data normalization – data reduction",
-        "d": "data consolidation – data cleaning – data normalization – data reduction"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "data consolidation – data cleaning – data transformation – data reduction"
-    },
-    {
-      "id": 84,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Mengurangi range data yang telah ada menjadi standar range (0 - 1) dalam proses data preprocessing disebut ..",
-      "opsi": {
-        "a": "Data normalization",
-        "b": "Data cleaning",
-        "c": "Data reduction",
-        "d": "Data collecting"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Data normalization"
-    },
-    {
-      "id": 85,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Ya/ tidak, benar/salah, termasuk jenis data",
-      "opsi": {
-        "a": "Data nominal",
-        "b": "Data ordinal",
-        "c": "Data tekstual",
-        "d": "Unstructuted data"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Data nominal"
-    },
-    {
-      "id": 86,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Seorang kepala daerah melakukan klaim bahwa tingkat kemiskinan di daerahnya sangatlah rendah. Untuk membuktikan hal tersebut, ia melakukan survei pendapatan dan pengeluaran rumah tangga yang secara teori mampu menghasilkan angka kemiskinan. Berdasarkan pertimbangan waktu dan biaya, maka dipilihlah 10.000 sampel rumah tangga dari total 100.000 rumah tangga yang ada di kabupaten tersebut. Pemodelan statistik yang cocok untuk kasus tersebut adalah …",
-      "opsi": {
-        "a": "Statistik Deskriptif",
-        "b": "Statistik Terpusat",
-        "c": "Statistik Inferensia",
-        "d": "Statistik Distribusi"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Statistik Inferensia"
-    },
-    {
-      "id": 87,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Diagram yang tepat untuk mengilustrasikan perbandingan nilai berkelanjutan pada dua kategori dengan menggunakan warna yang bertujuan untuk membantu pengguna dengan cepat melihat di mana persimpangan kategori terkuat dan terlemah melalui nilai numerik dari pengukuran yang dianalisis adalah …",
-      "opsi": {
-        "a": "Histogram",
-        "b": "Bullet",
-        "c": "Tree map",
-        "d": "Heatmap"
-      },
-      "jawaban": "d",
-      "jawaban_teks": "Heatmap"
-    },
-    {
-      "id": 88,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Aktivitas yang terdapat dalam proses data cleaning adalah …",
-      "opsi": {
-        "a": "Impute values, reduce noise, elimenate duplicates",
-        "b": "Normalize data, discretize data, create attributes",
-        "c": "Reduce dimension, reduce volume, balance data",
-        "d": "Normalize data, reduce noise, elimenate duplicates"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Impute values, reduce noise, elimenate duplicates"
-    },
-    {
-      "id": 89,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Data berdasarkan konteks merujuk pada data yang sesuai dalam bidang tertentu dan dalam subjek merujuk pada data yang disusun berdasarkan subjek terkait. Karakteristik data readiness tersebut dinamakan …",
-      "opsi": {
-        "a": "Data granularity",
-        "b": "Data consistency",
-        "c": "Data relevancy",
-        "d": "Data accuracy"
-      },
-      "jawaban": "c",
-      "jawaban_teks": "Data relevancy"
-    },
-    {
-      "id": 90,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Di bawah ini yang termasuk ukuran statistik yang menggambarkan sebaran data adalah",
-      "opsi": {
-        "a": "Standar devisiasi dan interkuartil",
-        "b": "Modus dan varian",
-        "c": "Jangkaun dan mean",
-        "d": "Kuartil dan median"
-      },
-      "jawaban": "a",
-      "jawaban_teks": "Standar devisiasi dan interkuartil"
-    },
-    {
-      "id": 91,
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "sumber": [
-        "uts_2021_clo2"
-      ],
-      "soal": "Skala pengukuran yang digunakan untuk menentukan ranking suatu kelompok tertentu. Dalam ranking ini hanya dipertimbangkan urutan obyek dari hasil yang paling besar sampai yang paling kecil atau dari yang paling tinggi hingga paling rendah. Misalnya dalam pengetahuan mahasiswa tentang Covid-19 (1=kurang, 2= cukup, 3= baik). Taksonomi data seperti contoh tersebut dinamakan …",
-      "opsi": {
-        "a": "Nominal",
-        "b": "Ordinal",
-        "c": "Interval",
-        "d": "Ratio"
-      },
-      "jawaban": "b",
-      "jawaban_teks": "Ordinal"
+      "jawaban_teks": "OLAP",
+      "penjelasan": "OLAP menganalisis dan meringkas data terstruktur secara multidimensi dalam bentuk kubus."
     },
     {
       "id": 101,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan operasi OLAP dengan penjelasannya",
       "items": [
         "Roll-up",
@@ -1500,12 +1118,15 @@
         "Slice": "Memfilter data pada satu dimensi (mis. hanya Januari 2025)",
         "Dice": "Memfilter data pada dua dimensi atau lebih sekaligus",
         "Pivot": "Memutar sumbu atau dimensi tampilan data"
-      }
+      },
+      "penjelasan": "Roll-up dan Drill-down berlawanan arah pada hierarki. Slice memfilter satu dimensi, Dice dua dimensi atau lebih, Pivot memutar tampilan."
     },
     {
       "id": 102,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 3,
+      "nama_topik": "Slowly Changing Dimension (SCD)",
       "soal": "Cocokkan jenis Slowly Changing Dimension (SCD) dengan cara kerjanya",
       "items": [
         "SCD Tipe 0",
@@ -1527,12 +1148,16 @@
         "SCD Tipe 2": "Menambah baris baru untuk setiap perubahan",
         "SCD Tipe 3": "Menambah kolom untuk menyimpan nilai sebelumnya",
         "SCD Tipe 4": "Histori dipindahkan ke tabel historis terpisah"
-      }
+      },
+      "penjelasan": "Tipe 0 tidak berubah, Tipe 1 menimpa, Tipe 2 menambah baris, Tipe 3 menambah kolom, Tipe 4 memakai tabel histori (menurut kunci LMS).",
+      "catatan": "Kunci jawaban dari LMS (SCD Tipe 4 = histori di tabel terpisah). Di materi kuliah, Tipe 4 dijelaskan sebagai mini-dimension, jadi cek ulang ke dosen/slide."
     },
     {
       "id": 103,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "soal": "Cocokkan arsitektur data warehouse dengan cirinya",
       "items": [
         "Independent Data Marts",
@@ -1554,12 +1179,15 @@
         "Centralized Data Warehouse": "Satu warehouse pusat tanpa data mart individual",
         "Hub-and-Spoke Architecture": "Data mart diturunkan dari warehouse pusat dan tidak berdiri sendiri",
         "Data Mart Bus Architecture": "Data mart dibangun bertahap dengan dimensi bersama yang konsisten"
-      }
+      },
+      "penjelasan": "Perbedaannya ada pada ada tidaknya warehouse pusat dan cara data mart terhubung: dependen (hub-and-spoke), independen, bus, terpusat, atau federated."
     },
     {
       "id": 104,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "soal": "Cocokkan skema data warehouse dengan cirinya",
       "items": [
         "Star Schema",
@@ -1575,12 +1203,15 @@
         "Star Schema": "Tabel fakta langsung terhubung ke dimensi tanpa hierarki",
         "Snowflake Schema": "Dimensi berbentuk hierarki dan dinormalisasi",
         "Fact Constellation Schema": "Beberapa tabel fakta berbagi dimensi yang sama"
-      }
+      },
+      "penjelasan": "Star: dimensi langsung ke fakta. Snowflake: dimensi dinormalisasi. Fact Constellation: banyak fakta berbagi dimensi."
     },
     {
       "id": 105,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "soal": "Cocokkan karakteristik data warehouse dengan maknanya",
       "items": [
         "Subject-oriented",
@@ -1599,12 +1230,15 @@
         "Integrated": "Data dari berbagai sumber disatukan dengan format yang konsisten",
         "Time-variant": "Data menyimpan histori sehingga mendukung analisis tren",
         "Non-volatile": "Data tidak diubah atau dihapus setelah masuk ke warehouse"
-      }
+      },
+      "penjelasan": "Empat karakteristik DW: subject-oriented (per subjek), integrated (disatukan), time-variant (ada histori), non-volatile (tidak diubah)."
     },
     {
       "id": 106,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "soal": "Cocokkan pendekatan atau konsep dengan penjelasannya",
       "items": [
         "Pendekatan Inmon",
@@ -1620,12 +1254,15 @@
         "Pendekatan Inmon": "Top-down: bangun Enterprise Data Warehouse dulu, lalu data mart",
         "Pendekatan Kimball": "Bottom-up: bangun data mart per proses bisnis, lalu integrasikan",
         "Conformed Dimension": "Dimensi yang dipakai bersama oleh beberapa data mart"
-      }
+      },
+      "penjelasan": "Inmon top-down (EDW dulu), Kimball bottom-up (data mart dulu), dan conformed dimension jadi perekat integrasi antar data mart."
     },
     {
       "id": 107,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "soal": "Cocokkan istilah ETL dengan penjelasannya",
       "items": [
         "Extract",
@@ -1644,12 +1281,15 @@
         "Transform": "Membersihkan dan mengubah format data",
         "Load": "Memasukkan data ke data warehouse",
         "Lookup": "Menyambungkan data ke referensi tambahan untuk memperkaya informasi"
-      }
+      },
+      "penjelasan": "ETL: Extract mengambil, Transform membersihkan dan mengubah, Load memasukkan ke DW. Lookup adalah salah satu jenis transformasi."
     },
     {
       "id": 108,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "soal": "Cocokkan komponen atau pendekatan ETL dengan penjelasannya",
       "items": [
         "Full Extraction",
@@ -1668,12 +1308,15 @@
         "Delta/Incremental Extraction": "Hanya menarik data yang baru atau berubah",
         "Staging Area": "Area sementara untuk menampung data sebelum ditransformasi",
         "Metadata ETL": "Informasi log dan performa proses ETL"
-      }
+      },
+      "penjelasan": "Full mengambil semua data, incremental hanya yang baru atau berubah. Staging menampung data sementara, metadata mencatat log dan performa ETL."
     },
     {
       "id": 109,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 5,
+      "nama_topik": "Cloud Data Warehouse (CDW) & Google BigQuery",
       "soal": "Cocokkan jenis data warehouse dengan cirinya",
       "items": [
         "Cloud Data Warehouse",
@@ -1689,12 +1332,15 @@
         "Cloud Data Warehouse": "Skalabilitas fleksibel dengan biaya berbasis penggunaan (OpEx)",
         "On-Premise Data Warehouse": "Data disimpan di pusat data milik organisasi sendiri",
         "Federated Data Warehouse": "Data tetap di sistem asal, disatukan lewat virtualisasi"
-      }
+      },
+      "penjelasan": "Cloud: elastis dan bayar per pakai. On-premise: data di pusat data sendiri. Federated: data tetap di sumber dan disatukan lewat virtualisasi."
     },
     {
       "id": 110,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "soal": "Cocokkan komponen model dimensional dengan perannya",
       "items": [
         "Tabel Fakta",
@@ -1713,12 +1359,15 @@
         "Tabel Dimensi": "Menyimpan atribut deskriptif, mis. nama produk",
         "Foreign Key di tabel fakta": "Menghubungkan tabel fakta ke tabel dimensi",
         "Surrogate Key": "Kunci buatan sistem sebagai pengganti kunci bisnis"
-      }
+      },
+      "penjelasan": "Fakta menyimpan measure, dimensi menyimpan atribut deskriptif, foreign key menghubungkan keduanya, dan surrogate key adalah kunci buatan pengganti kunci bisnis."
     },
     {
       "id": 111,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 2,
+      "nama_topik": "Metodologi Data Warehouse & Dimensional Modeling",
       "soal": "Cocokkan kasus berikut dengan skema yang sesuai",
       "items": [
         "Tabel fakta \"Perjalanan\" dan \"Pembayaran\" berbagi dimensi Waktu, Pengemudi, dan Penumpang",
@@ -1734,12 +1383,15 @@
         "Tabel fakta \"Perjalanan\" dan \"Pembayaran\" berbagi dimensi Waktu, Pengemudi, dan Penumpang": "Fact Constellation Schema",
         "Dimensi lokasi: Kota terhubung ke Provinsi dan Negara dalam tabel terpisah": "Snowflake Schema",
         "Fakta \"Transaksi Penjualan\" langsung terhubung ke dimensi Produk, Kasir, dan Waktu tanpa hierarki": "Star Schema"
-      }
+      },
+      "penjelasan": "Banyak fakta berbagi dimensi adalah Fact Constellation, dimensi dinormalisasi adalah Snowflake, dan fakta langsung ke dimensi tanpa hierarki adalah Star."
     },
     {
       "id": 112,
       "tipe": "drag_drop",
       "kategori": "Data Warehouse & OLAP",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan kasus berikut dengan operasi OLAP yang sesuai",
       "items": [
         "Laporan penjualan mingguan digabung menjadi penjualan bulanan",
@@ -1758,132 +1410,15 @@
         "Menyaring data hanya untuk Januari 2025 dari semua wilayah dan produk": "Slice",
         "Memilih data penjualan wilayah \"Jawa Barat\" dan produk \"Minuman\"": "Dice",
         "Menelusuri nilai anomali di laporan mingguan hingga transaksi harian": "Drill-down"
-      }
-    },
-    {
-      "id": 113,
-      "tipe": "drag_drop",
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "soal": "Urutkan langkah data preprocessing dengan kegiatannya",
-      "items": [
-        "Data Consolidation",
-        "Data Cleaning",
-        "Data Transformation",
-        "Data Reduction"
-      ],
-      "targets": [
-        "Mengurangi dimensi atau volume, mis. oversampling untuk data tidak seimbang",
-        "Impute nilai kosong, reduce noise, hapus duplikat",
-        "Normalisasi, diskretisasi, dan membuat atribut baru",
-        "Menggabungkan data dari berbagai sumber"
-      ],
-      "jawaban": {
-        "Data Consolidation": "Menggabungkan data dari berbagai sumber",
-        "Data Cleaning": "Impute nilai kosong, reduce noise, hapus duplikat",
-        "Data Transformation": "Normalisasi, diskretisasi, dan membuat atribut baru",
-        "Data Reduction": "Mengurangi dimensi atau volume, mis. oversampling untuk data tidak seimbang"
-      }
-    },
-    {
-      "id": 114,
-      "tipe": "drag_drop",
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "soal": "Cocokkan taksonomi data dengan contohnya",
-      "items": [
-        "Nominal",
-        "Ordinal",
-        "Interval",
-        "Ratio"
-      ],
-      "targets": [
-        "Berat badan, tinggi badan, dan massa",
-        "Suhu dalam derajat Celcius",
-        "Data binomial (ya/tidak)",
-        "Tingkat pengetahuan: 1 = kurang, 2 = cukup, 3 = baik"
-      ],
-      "jawaban": {
-        "Nominal": "Data binomial (ya/tidak)",
-        "Ordinal": "Tingkat pengetahuan: 1 = kurang, 2 = cukup, 3 = baik",
-        "Interval": "Suhu dalam derajat Celcius",
-        "Ratio": "Berat badan, tinggi badan, dan massa"
-      }
-    },
-    {
-      "id": 115,
-      "tipe": "drag_drop",
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "soal": "Cocokkan jenis grafik dengan kebutuhannya",
-      "items": [
-        "Scatterplot",
-        "Wordcloud",
-        "Heatmap",
-        "Tree map",
-        "Bar Chart"
-      ],
-      "targets": [
-        "Menampilkan kata yang banyak dibicarakan di media sosial",
-        "Menampilkan data hierarki sebagai persegi panjang bersarang",
-        "Membandingkan jumlah kasus antar kategori, mis. 5 Posyandu",
-        "Melihat hubungan total penjualan dengan biaya iklan",
-        "Melihat persimpangan dua kategori terkuat dan terlemah lewat warna"
-      ],
-      "jawaban": {
-        "Scatterplot": "Melihat hubungan total penjualan dengan biaya iklan",
-        "Wordcloud": "Menampilkan kata yang banyak dibicarakan di media sosial",
-        "Heatmap": "Melihat persimpangan dua kategori terkuat dan terlemah lewat warna",
-        "Tree map": "Menampilkan data hierarki sebagai persegi panjang bersarang",
-        "Bar Chart": "Membandingkan jumlah kasus antar kategori, mis. 5 Posyandu"
-      }
-    },
-    {
-      "id": 116,
-      "tipe": "drag_drop",
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "soal": "Cocokkan asumsi regresi linear dengan maknanya",
-      "items": [
-        "Linearity",
-        "Independence",
-        "Constant Variance",
-        "Normality"
-      ],
-      "targets": [
-        "Kesalahan tidak berkorelasi satu sama lain",
-        "Kesalahan berdistribusi normal",
-        "Sebaran kesalahan prediksi konsisten",
-        "Hubungan variabel bebas dan terikat bersifat linear"
-      ],
-      "jawaban": {
-        "Linearity": "Hubungan variabel bebas dan terikat bersifat linear",
-        "Independence": "Kesalahan tidak berkorelasi satu sama lain",
-        "Constant Variance": "Sebaran kesalahan prediksi konsisten",
-        "Normality": "Kesalahan berdistribusi normal"
-      }
-    },
-    {
-      "id": 117,
-      "tipe": "drag_drop",
-      "kategori": "Analitik, Statistik & Visualisasi",
-      "soal": "Cocokkan karakteristik data readiness dengan maknanya",
-      "items": [
-        "Data granularity",
-        "Data relevancy",
-        "Data richness"
-      ],
-      "targets": [
-        "Nilai data didefinisikan pada tingkat detail sesuai tujuan penggunaan",
-        "Setiap elemen data tersedia di dataset",
-        "Data sesuai dengan konteks bidang dan subjek terkait"
-      ],
-      "jawaban": {
-        "Data granularity": "Nilai data didefinisikan pada tingkat detail sesuai tujuan penggunaan",
-        "Data relevancy": "Data sesuai dengan konteks bidang dan subjek terkait",
-        "Data richness": "Setiap elemen data tersedia di dataset"
-      }
+      },
+      "penjelasan": "Naik level (mingguan ke bulanan) adalah Roll-up, turun level adalah Drill-down, satu dimensi adalah Slice, dua dimensi atau lebih adalah Dice."
     },
     {
       "id": 118,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan klausa SQL dengan fungsinya",
       "items": [
         "SELECT",
@@ -1908,12 +1443,15 @@
         "GROUP BY": "Mengelompokkan baris untuk agregasi",
         "HAVING": "Memfilter hasil kelompok setelah agregasi",
         "ORDER BY": "Mengurutkan hasil query"
-      }
+      },
+      "penjelasan": "Urutan logis eksekusi: FROM, WHERE (filter baris), GROUP BY, HAVING (filter kelompok), SELECT, lalu ORDER BY."
     },
     {
       "id": 119,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan fungsi agregat SQL dengan hasilnya",
       "items": [
         "SUM()",
@@ -1935,12 +1473,15 @@
         "AVG()": "Menghitung rata-rata nilai",
         "MAX()": "Mengambil nilai terbesar",
         "MIN()": "Mengambil nilai terkecil"
-      }
+      },
+      "penjelasan": "Fungsi agregat meringkas banyak baris menjadi satu nilai: jumlah, hitungan, rata-rata, maksimum, atau minimum."
     },
     {
       "id": 120,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan jenis JOIN dengan hasilnya",
       "items": [
         "INNER JOIN",
@@ -1959,12 +1500,15 @@
         "LEFT JOIN": "Semua baris tabel kiri, kolom tabel kanan NULL jika tidak cocok",
         "RIGHT JOIN": "Semua baris tabel kanan, kolom tabel kiri NULL jika tidak cocok",
         "CROSS JOIN": "Kombinasi semua baris dari kedua tabel"
-      }
+      },
+      "penjelasan": "INNER hanya baris yang cocok, LEFT dan RIGHT mempertahankan semua baris satu sisi, CROSS menghasilkan semua kombinasi baris."
     },
     {
       "id": 121,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan potongan query pada star schema dengan operasi OLAP-nya",
       "items": [
         "SELECT tahun, SUM(jumlah) ... GROUP BY tahun",
@@ -1983,12 +1527,15 @@
         "WHERE bulan = 'Januari' AND tahun = 2025": "Slice",
         "WHERE wilayah = 'Jawa Barat' AND kategori = 'Minuman'": "Dice",
         "GROUP BY tahun, bulan, tanggal": "Drill-down"
-      }
+      },
+      "penjelasan": "Agregasi dengan GROUP BY lebih sedikit kolom adalah Roll-up, GROUP BY lebih rinci adalah Drill-down, WHERE pada satu dimensi adalah Slice, pada dua dimensi adalah Dice."
     },
     {
       "id": 122,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan kebutuhan analisis dengan potongan query yang sesuai",
       "items": [
         "Menghitung jumlah transaksi",
@@ -2010,12 +1557,15 @@
         "Hanya baris dengan penjualan di atas 100 juta": "WHERE total_penjualan > 100000000",
         "Hanya kelompok dengan total penjualan di atas 100 juta": "HAVING SUM(total_penjualan) > 100000000",
         "Mengurutkan dari penjualan terbesar": "ORDER BY total_penjualan DESC"
-      }
+      },
+      "penjelasan": "WHERE memfilter baris sebelum pengelompokan, HAVING memfilter hasil agregasi. Fungsi COUNT dan AVG menghitung ringkasannya."
     },
     {
       "id": 123,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan perintah SQL dengan fungsinya",
       "items": [
         "CREATE TABLE",
@@ -2037,12 +1587,15 @@
         "UPDATE": "Mengubah data yang sudah ada",
         "DELETE": "Menghapus baris data",
         "ALTER TABLE": "Mengubah struktur tabel"
-      }
+      },
+      "penjelasan": "CREATE dan ALTER mengatur struktur tabel (DDL). INSERT, UPDATE, dan DELETE mengubah isi data (DML)."
     },
     {
       "id": 124,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan operator SQL dengan kegunaannya",
       "items": [
         "DISTINCT",
@@ -2064,12 +1617,15 @@
         "BETWEEN": "Memfilter nilai dalam suatu rentang",
         "IS NULL": "Mengecek nilai kosong",
         "IN": "Mencocokkan salah satu nilai dalam daftar"
-      }
+      },
+      "penjelasan": "Operator ini dipakai di WHERE atau SELECT untuk menghilangkan duplikat, mencocokkan pola, rentang, nilai kosong, atau daftar nilai."
     },
     {
       "id": 125,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 1,
+      "nama_topik": "Pengantar Data Warehouse & ETL",
       "soal": "Cocokkan kebutuhan data cleaning dengan query-nya",
       "items": [
         "Mencari data duplikat",
@@ -2088,12 +1644,15 @@
         "Mencari nilai kosong": "WHERE kolom IS NULL",
         "Mengganti NULL dengan 0": "COALESCE(kolom, 0)",
         "Menggabungkan dua kolom teks": "CONCAT(nama_depan, nama_belakang)"
-      }
+      },
+      "penjelasan": "Untuk cleansing: GROUP BY + HAVING COUNT > 1 menemukan duplikat, IS NULL menemukan nilai kosong, COALESCE mengganti NULL, CONCAT menggabungkan teks."
     },
     {
       "id": 126,
       "tipe": "drag_drop",
       "kategori": "SQL Query",
+      "topik": 4,
+      "nama_topik": "Online Analytical Processing (OLAP)",
       "soal": "Cocokkan konsep SQL dengan penjelasannya",
       "items": [
         "GROUP BY ... WITH ROLLUP",
@@ -2112,7 +1671,8 @@
         "Subquery": "Query di dalam query lain",
         "View": "Query tersimpan sebagai tabel virtual",
         "Index": "Struktur untuk mempercepat pencarian data"
-      }
+      },
+      "penjelasan": "WITH ROLLUP (MySQL) menghasilkan subtotal bertingkat dan grand total. Subquery, view, dan index adalah konsep SQL pendukung."
     }
   ]
 }
