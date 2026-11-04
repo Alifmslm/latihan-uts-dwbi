@@ -721,6 +721,29 @@ button {
   font-weight: 800;
 }
 
+.feedback-explanation {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(23, 32, 58, 0.14);
+}
+
+.explanation-label {
+  display: block;
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.feedback-explanation p {
+  margin: 3px 0 0;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
 /* ---------- Buttons & footer ---------- */
 
 .quiz-footer {

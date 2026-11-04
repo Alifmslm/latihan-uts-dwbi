@@ -39,7 +39,8 @@ npm run preview
   (termasuk posisi drag & drop dan feedback), dan skor dihitung dari hasil
   masing-masing soal.
 - Satu soal per halaman, lengkap dengan progres dan tombol Selanjutnya.
-- Feedback benar/salah langsung muncul beserta jawaban yang benar.
+- Feedback benar/salah langsung muncul beserta jawaban yang benar dan
+  **penjelasan** (field `penjelasan` di soal.json).
 - Skor akhir, jumlah benar/salah, tombol Ulangi dan Kembali ke Menu.
 - Drag & drop memakai `@dnd-kit/core` dengan `MouseSensor` + `TouchSensor`
   (mendukung HP, bukan HTML5 drag API).
@@ -93,10 +94,13 @@ Jika field `tipe` tidak ada, soal dianggap `pilihan_ganda`.
 }
 ```
 
-Field lain seperti `kategori`, `sumber`, `catatan`, dan `jawaban_teks` boleh ada;
-aplikasi hanya memakai `kategori` untuk label dan mengabaikan sisanya.
+Field lain seperti `kategori`, `topik`, `nama_topik`, `sumber`, `catatan`,
+dan `jawaban_teks` boleh ada; aplikasinya hanya memakai `kategori` untuk
+label dan `penjelasan` untuk kotak feedback, sisanya diabaikan.
 
 ## Catatan
 
-Bank soal saat ini berisi **117 soal**: 91 pilihan ganda (id 1–91) dan 26
-drag & drop (id 101–126). Mode Drag & Drop sudah berfungsi penuh.
+Bank soal saat ini berisi **74 soal**: 53 pilihan ganda dan 21
+drag & drop. Mode Drag & Drop sudah berfungsi penuh. Semua soal punya field
+`penjelasan`, yang ditampilkan di kotak feedback setelah menjawab (dan saat
+melihat kembali soal sebelumnya).

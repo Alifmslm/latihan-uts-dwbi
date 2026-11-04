@@ -104,6 +104,12 @@ export default function Quiz({
               ) : (
                 <p>Periksa pasangan yang ditandai merah.</p>
               )}
+              {question.penjelasan && (
+                <div className="feedback-explanation">
+                  <span className="explanation-label">Penjelasan</span>
+                  <p>{question.penjelasan}</p>
+                </div>
+              )}
             </div>
           </div>
         )}
