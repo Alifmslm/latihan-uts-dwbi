@@ -10,6 +10,7 @@ export const MODES = {
     label: "Soal Campuran",
     description: "Pilihan ganda dan drag & drop dalam satu sesi.",
     filter: () => true,
+    topicFilter: true,
   },
   pilihan_ganda: {
     id: "pilihan_ganda",
@@ -17,6 +18,7 @@ export const MODES = {
     label: "Pilihan Ganda",
     description: "Latihan memilih satu jawaban yang tepat.",
     filter: (question) => question.tipe === "pilihan_ganda",
+    topicFilter: true,
   },
   drag_drop: {
     id: "drag_drop",

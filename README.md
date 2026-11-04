@@ -25,12 +25,20 @@ npm run preview
 - Setiap mode punya form **Atur jumlah soal** sebelum mulai: input angka
   (1–maksimal bank mode, mis. 10 soal), tombol cepat 5/10/15/20/25/35, dan
   opsi "Semua". Default 35 soal (dibatasi ukuran bank).
+- Mode **Soal Campuran** dan **Pilihan Ganda** punya **Filter topik** di
+  bawah form Atur jumlah soal: centang satu atau lebih topik (dengan jumlah
+  soal per topik), atau kosongkan semua untuk mengerjakan semua topik.
+  Jumlah soal yang dipilih menyesuaikan ukuran pool hasil filter. Filter
+  Drag & Drop belum tersedia.
 - Routing dengan `react-router-dom` (HashRouter, aman untuk hosting statis):
   - `/` — menu utama
   - `/quiz/campuran?jumlah=10` — soal campuran, 10 soal
   - `/quiz/pilihan-ganda?jumlah=10` — pilihan ganda, 10 soal
+  - `/quiz/campuran?jumlah=10&topik=1,4` — hanya topik 1 dan 4
   - `/quiz/drag-drop` — drag & drop, default 35 (dibatasi 26)
   - Parameter `jumlah` opsional; tanpa parameter, default 35 soal.
+  - Parameter `topik` opsional; berisi daftar nomor topik, dipisah koma.
+    Tanpa parameter, semua topik diikutkan.
 - Tombol **← Kembali ke Menu** tersedia di setiap halaman kuis (dan layar
   hasil) untuk kembali ke menu utama kapan pun.
 - Soal diacak setiap sesi.
@@ -94,9 +102,10 @@ Jika field `tipe` tidak ada, soal dianggap `pilihan_ganda`.
 }
 ```
 
-Field lain seperti `kategori`, `topik`, `nama_topik`, `sumber`, `catatan`,
-dan `jawaban_teks` boleh ada; aplikasinya hanya memakai `kategori` untuk
-label dan `penjelasan` untuk kotak feedback, sisanya diabaikan.
+Field `topik` dan `nama_topik` dipakai oleh Filter topik. Field lain seperti
+`kategori`, `sumber`, `catatan`, dan `jawaban_teks` boleh ada; aplikasinya
+memakai `kategori` untuk label dan `penjelasan` untuk kotak feedback, sisanya
+diabaikan.
 
 ## Catatan
 

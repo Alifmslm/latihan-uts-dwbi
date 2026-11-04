@@ -27,14 +27,29 @@ function resolveLimit(poolSize, param) {
   return Math.max(1, Math.min(parsed, poolSize));
 }
 
-function buildSession(questions, mode, limit) {
-  const pool = questions.filter(mode.filter);
+// Filter topik dari query param, mis. topik=1,4 → Set([1, 4]).
+// Kosong atau tidak valid → null (semua topik).
+function resolveTopics(param) {
+  if (!param) return null;
+  const ids = param
+    .split(",")
+    .map((part) => Number.parseInt(part.trim(), 10))
+    .filter((n) => Number.isFinite(n));
+  return ids.length > 0 ? new Set(ids) : null;
+}
+
+function buildSession(questions, mode, limit, topicSet = null) {
+  let pool = questions.filter(mode.filter);
+  if (topicSet) {
+    pool = pool.filter((question) => topicSet.has(question.topik));
+  }
   const size = resolveLimit(pool.length, limit);
   return {
     questions: shuffle(pool).slice(0, size),
     screen: "quiz",
     index: 0,
     answers: {},
+    poolSize: pool.length,
   };
 }
 
@@ -46,23 +61,28 @@ function QuizRoute({ questions }) {
   if (!mode) return <Navigate to="/" replace />;
 
   const jumlah = searchParams.get("jumlah") ?? "default";
+  const topik = searchParams.get("topik") ?? "";
   return (
     <QuizSession
-      key={`${mode.id}-${jumlah}`}
+      key={`${mode.id}-${jumlah}-${topik}`}
       mode={mode}
       questions={questions}
       jumlah={jumlah === "default" ? null : jumlah}
+      topik={topik}
     />
   );
 }
 
-function QuizSession({ mode, questions, jumlah }) {
+function QuizSession({ mode, questions, jumlah, topik = "" }) {
   const navigate = useNavigate();
   const backToMenu = () => navigate("/");
-  const [session, setSession] = useState(() => buildSession(questions, mode, jumlah));
+  const topicSet = resolveTopics(topik);
+  const [session, setSession] = useState(() =>
+    buildSession(questions, mode, jumlah, topicSet)
+  );
 
   function restart() {
-    setSession(buildSession(questions, mode, jumlah));
+    setSession(buildSession(questions, mode, jumlah, topicSet));
   }
 
   function handleAnswer(isCorrect, correctAnswer = "", details = {}) {
@@ -94,6 +114,8 @@ function QuizSession({ mode, questions, jumlah }) {
   }
 
   if (session.questions.length === 0) {
+    const emptiedByFilter =
+      topicSet !== null && questions.some(mode.filter) && (session.poolSize ?? 0) === 0;
     return (
       <section className="quiz">
         <button type="button" className="back-btn" onClick={backToMenu}>
@@ -101,10 +123,17 @@ function QuizSession({ mode, questions, jumlah }) {
         </button>
         <div className="state-card" role="status">
           <h1>Belum ada soal</h1>
-          <p>
-            Belum ada soal untuk mode "{mode.label}". Tambahkan soal tipe
-            tersebut ke public/data/soal.json.
-          </p>
+          {emptiedByFilter ? (
+            <p>
+              Tidak ada soal untuk topik yang dipilih di mode "{mode.label}".
+              Kembali ke Menu dan centang topik lain, atau kosongkan filter.
+            </p>
+          ) : (
+            <p>
+              Belum ada soal untuk mode "{mode.label}". Tambahkan soal tipe
+              tersebut ke public/data/soal.json.
+            </p>
+          )}
         </div>
       </section>
     );
@@ -166,8 +195,15 @@ function MenuRoute({ questions }) {
       <Customize
         mode={mode}
         count={counts[selectedMode] ?? 0}
+        questions={questions}
         onBack={() => setSelectedMode(null)}
-        onStart={(jumlah) => navigate(`/quiz/${mode.path}?jumlah=${jumlah}`)}
+        onStart={(jumlah, topik) =>
+          navigate(
+            `/quiz/${mode.path}?jumlah=${jumlah}${
+              topik?.length ? `&topik=${topik.join(",")}` : ""
+            }`
+          )
+        }
       />
     );
   }
